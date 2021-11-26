@@ -1,0 +1,20 @@
+add this packages to your dependencies
+"@solana/wallet-adapter-base": "^0.7.0",
+"@solana/wallet-adapter-react": "^0.13.0",
+"@solana/wallet-adapter-react-ui": "^0.6.0",
+"@solana/wallet-adapter-wallets": "^0.11.0",
+"@solana/web3.js": "^1.20.0",
+
+create a next.config.js file or complete it with my file
+
+in components folder you have WalletConnectionProvider.tsx
+you can rename to js and remove types inside
+
+in the _app.tsx file you can see how use the 2 components (import as you use to for WalletConnectionProvider)
+<WalletConnectionProvider>
+<WalletModalProvider>
+
+And in index.tsx you can see how get all token from user account, filter by 1 supply (can be nft or not), and compare with your database to keep good ones.
+If one found connect is ok, if not force disconnect
+
+after you just have to fetch nfts data for each eligible nfts
